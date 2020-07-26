@@ -17,4 +17,14 @@
   <ItemGroup>
     <None Include="libnao-ui.licenseheader" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\nao\widget.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\widget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
 </Project>
