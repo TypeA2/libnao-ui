@@ -1,11 +1,12 @@
-﻿# CMakeList.txt : CMake project for libnao-ui, include source and define
-# project specific logic here.
-#
-cmake_minimum_required (VERSION 3.8)
+﻿cmake_minimum_required (VERSION 3.8)
 
 project ("libnao-ui")
 
-# Add source to this project's executable.
-add_executable (libnao-ui "libnao-ui.cpp" "libnao-ui.h")
+add_library(libnao-ui STATIC
+	"src/libnao-ui.cpp"
+	"include/libnao-ui.h"
+)
 
-# TODO: Add tests and install targets if needed.
+set_property(TARGET libnao-ui PROPERTY CXX_STANDARD 20)
+
+target_include_directories(libnao-ui PUBLIC "include")
